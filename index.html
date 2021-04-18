@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="images/stars.png" id="stars" alt="" />
+      <img src="images/moon.png" id="moon" alt="" />
+      <img src="images/mountains_behind.png" id="mountains_behind" alt="" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="images/mountains_front.png" id="mountains_front" alt="" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam
+        illum ducimus culpa repellat rerum aut error ut architecto commodi fugit
+        veniam tempora quia cum cumque quaerat, porro deserunt expedita omnis
+        suscipit repudiandae rem quos nostrum excepturi. Dicta cum harum magni
+        saepe temporibus ab dignissimos? Aliquam quas earum, nemo vitae facere
+        natus porro et illo excepturi corporis vero, omnis voluptas voluptatem!
+        Quibusdam illo recusandae cum suscipit consequuntur, aperiam soluta
+        quae, temporibus laudantium eaque at voluptates quidem ab asperiores
+        aliquid molestias delectus unde! Labore totam ad suscipit, rerum
+        architecto fuga aut! Sint ducimus, natus doloremque rem commodi pariatur
+        accusamus incidunt voluptatem.
+      </p>
+      <br />
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam
+        illum ducimus culpa repellat rerum aut error ut architecto commodi fugit
+        veniam tempora quia cum cumque quaerat, porro deserunt expedita omnis
+        suscipit repudiandae rem quos nostrum excepturi. Dicta cum harum magni
+        saepe temporibus ab dignissimos? Aliquam quas earum, nemo vitae facere
+        natus porro et illo excepturi corporis vero, omnis voluptas voluptatem!
+        Quibusdam illo recusandae cum suscipit consequuntur, aperiam soluta
+        quae, temporibus laudantium eaque at voluptates quidem ab asperiores
+        aliquid molestias delectus unde! Labore totam ad suscipit, rerum
+        architecto fuga aut! Sint ducimus, natus doloremque rem commodi pariatur
+        accusamus incidunt voluptatem.
+      </p>
+      <br />
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam
+        illum ducimus culpa repellat rerum aut error ut architecto commodi fugit
+        veniam tempora quia cum cumque quaerat, porro deserunt expedita omnis
+        suscipit repudiandae rem quos nostrum excepturi. Dicta cum harum magni
+        saepe temporibus ab dignissimos? Aliquam quas earum, nemo vitae facere
+        natus porro et illo excepturi corporis vero, omnis voluptas voluptatem!
+        Quibusdam illo recusandae cum suscipit consequuntur, aperiam soluta
+        quae, temporibus laudantium eaque at voluptates quidem ab asperiores
+        aliquid molestias delectus unde! Labore totam ad suscipit, rerum
+        architecto fuga aut! Sint ducimus, natus doloremque rem commodi pariatur
+        accusamus incidunt voluptatem.
+      </p>
+      <br />
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint laboriosam
+        illum ducimus culpa repellat rerum aut error ut architecto commodi fugit
+        veniam tempora quia cum cumque quaerat, porro deserunt expedita omnis
+        suscipit repudiandae rem quos nostrum excepturi. Dicta cum harum magni
+        saepe temporibus ab dignissimos? Aliquam quas earum, nemo vitae facere
+        natus porro et illo excepturi corporis vero, omnis voluptas voluptatem!
+        Quibusdam illo recusandae cum suscipit consequuntur, aperiam soluta
+        quae, temporibus laudantium eaque at voluptates quidem ab asperiores
+        aliquid molestias delectus unde! Labore totam ad suscipit, rerum
+        architecto fuga aut! Sint ducimus, natus doloremque rem commodi pariatur
+        accusamus incidunt voluptatem.
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let mountains_front = document.getElementById('mountains_front');
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function () {
+        let value = window.scrollY;
+
+        // element 的 style.left?
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.Top = value * 0.5 + 'px';
+      });
+    </script>
+  </body>
+</html>
